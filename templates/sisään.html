@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uudet tunnukset /ka.palsta</title>
+<style>
+ body {
+    background-color: sienna;
+    font-family: Arial, sans-serif;
+    text-align: center
+}
+h2 {
+   color: lightcoral;
+}
+p {
+   color: pink;
+   text-decoration: none;
+   font-size: 18px;
+   margin: 10px;
+}
+input[type="submit"] {
+     background-color: pink;
+     color: black;
+     padding: 5px 15px;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+}
+input[type="text"] {
+     padding: 5px 15px;
+     border: none;
+     border-radius: 6px;
+}
+input[type="password"] {
+     padding: 5px 15px;
+     border: none;
+     border-radius: 6px;
+}
+</style>
+</head>
+<body>
+
+<h2>Uudet tunnukset!!</h2>
+
+<form action="/sisään" method="POST">
+<br><p> Käyttäjätunnus:</p> <input type="text" name="username">
+<br><p> Salasana:</p> <input type="password" name="password_1">
+<br><p> Salasana (uudelleen):</p> <input type="password" name="password_2">
+<br> <input type="submit" value="Luo tunnukset">
+</form>
+</body>

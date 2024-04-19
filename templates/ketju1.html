@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ensimmäinen ketju /ka.palsta</title>
+<style>
+ body {
+    background-color: sienna;
+    font-family: Arial, sans-serif;
+    text-align: center
+}
+h2 {
+   color: lightcoral;
+}
+p {
+   color: pink;
+   text-decoration: none; 
+   font-size: 18px;
+   margin: 10px
+}
+a[href="/logout"] {
+       color: lightcoral;
+       text-decoration: underline; 
+       padding: 5px 15px;
+       border: none; 
+       border-radius: 6px;
+}
+a[href="/uusi"] {
+       color: lightcoral;
+       text-decoration: underline; 
+       padding: 5px 15px;
+       border: none;
+       border-radius: 6px;
+}
+a {
+  color: lightcoral;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px
+}
+
+</style>
+</head>
+<body>
+<br><p>Olet kirjautuneena sisään nimellä: {{ username }}.</p>
+<br><h2>Olet ensimmäisessä ketjussa</h2>
+<br><p>Keskustelualue, viestien määrä {{ count }}</p>
+<hr>
+{% if messages %}
+  {% for message in messages %}
+<br><a>Viimeisin viesti: </a> 
+     <div class="message">
+      <p><strong>Lähettäjä:</strong> {{ message[1] }}</p>
+      <p><strong>Aika:</strong> {{ message[2] }}</p>
+      <p>{{ message[0] }}</p>
+    </div>
+    <hr>
+  {% endfor %}
+{% else %}
+  <p>Ei viestejä tässä ketjussa.</p>
+{% endif %}
+<a href="/uusi">Lähetä viesti</a>
+<br><a href="/logout">Kirjaudu ulos</a>
+</body>

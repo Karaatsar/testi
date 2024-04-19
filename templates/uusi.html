@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uusi viesti /ka.palsta</title>
+<style>
+body {
+      background-color: sienna;
+      font-family: Arial, sans-serief;
+      text-align: center
+}
+h2 {
+    color: lightcoral;
+}
+p {
+   color: pink;
+   text-decoration: none;
+   font-size: 18px
+   margin 10px
+}
+a[href="/logout"] {
+       color: lightcoral;
+       background-color: black;
+       padding: 5px 15px;
+       border: none;
+       border-radius: 6px;
+}
+input[type="submit"] {
+     background-color: pink;
+     color: pink;
+     padding: 5px 15px;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+}
+input[type="text"] {
+     padding: 5px 15px;
+     border: none;
+     border-radius: 6px;
+}
+input[name="content"] {
+      padding: 5px 15px;
+      border: none;
+      border-radius: 6px;
+}
+</style>
+</head>
+<body>
+<br><p> Olet kirjautuneena sisään nimellä: {{ username }}.</p>
+
+<h2>Uusi viesti:</h2>
+<hr>
+<form action="/send" method="POST">
+<p>Otsikko:</p> <input type="text" name="title"> <br>
+<p>  Viesti:</p> <br>
+  <textarea name="content" rows="4" cols="40"></textarea>
+  <br>
+    <input type="submit" value="Lähetä">
+    <br>
+</form>
+<br> <a href="/logout">Kirjaudu ulos</a>
+</body>

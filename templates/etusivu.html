@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etusivu /ka.palsta</title>
+<style>
+body {
+    background-color: sienna;
+    font-family: Arial, sans-serif;
+    text-align: center
+}
+h2 {
+   color: lightcoral;
+}
+a {
+   color: lightcoral;
+   text-decoration: none;
+   font-size: 18px
+   margin 10px
+}
+p {
+   color: pink;
+   text-decoration: none;
+   font-size: 18px
+   margin 10px
+}
+ul {
+    display: inline-block;
+    color: pink;
+    text-decoration: underline;
+    font-size: 18px
+    margin 10px;
+}
+a[href="/logout"] {
+       color: lighcoral; 
+       background-color: black; 
+       padding: 5px 15px;
+       border: none;
+       border-radius: 6px;
+}
+ 
+
+</style>
+</head>
+<body>
+<h2>Etusivu</h2>
+<br><p> Tervetuloa keskustelupalstoille!</p>
+<br><p> Olet kirjautuneena sisään nimellä <a> {{ username }}</a></p> 
+<hr>
+<h2>ketjut:</h2>
+<ul>
+   <li> <a href="/ketju1"> Ensimmäinen ketju</a>
+   <li> <a href="/ketju2"> Toinen ketju</a>
+   <li> <a href="/ketju3"> Kolmas ketju</a></li>
+</ul>
+<br> <a href="/logout">Kirjaudu ulos</a>
+</body>
